@@ -1,9 +1,11 @@
-function makeTransaction (quantity, pricePerDroid){
-return(`"You ordered ${quantity} droids worth ${quantity * pricePerDroid} credits!"`);
-}
-
-
-
-console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
+const categoriesUl = document.getElementById('categories');
+const categories = categoriesUl.querySelectorAll('.item');
+const numberOfCategories = categories.length;
+    console.log('Number of categories: ' + numberOfCategories);
+categories.forEach(function(category) {
+const categoryTitle = category.querySelector('h2').innerText;
+const categoryItems = category.querySelectorAll('li');
+const numberOfItems = categoryItems.length;
+  console.log('Category: ' + categoryTitle);
+  console.log('Elements: ' + numberOfItems);
+});
